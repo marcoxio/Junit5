@@ -1,6 +1,6 @@
 package com.example.unittesting.unittesting.business;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.test.util.AssertionErrors;
 
 import static org.junit.Assert.*;
