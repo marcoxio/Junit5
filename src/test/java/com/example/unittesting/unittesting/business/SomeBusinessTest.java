@@ -3,7 +3,7 @@ package com.example.unittesting.unittesting.business;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.util.AssertionErrors;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SomeBusinessTest {
     @Test

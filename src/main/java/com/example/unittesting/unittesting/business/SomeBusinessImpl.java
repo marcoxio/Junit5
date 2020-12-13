@@ -17,6 +17,8 @@ public class SomeBusinessImpl {
             sum += value;
         }
         return sum;
+        //Functional Style
+        //return Arrays.stream(data).reduce(Integer::sum).orElse(0);
     }
 
     public int calculateSumUsingDataService() {

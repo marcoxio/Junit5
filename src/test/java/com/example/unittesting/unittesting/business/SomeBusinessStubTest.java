@@ -3,29 +3,30 @@ package com.example.unittesting.unittesting.business;
 import com.example.unittesting.unittesting.data.SomeDataService;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+class SomeDataServiceStub implements SomeDataService {
+    @Override
+    public int[] retrieveAllData() {
+        return new int[] {1,2,3};
+    }
+}
+
+class SomeDataServiceEmptyStub implements SomeDataService {
+    @Override
+    public int[] retrieveAllData() {
+        return new int[] {};
+    }
+}
+
+class SomeDataServiceOneElementStub implements SomeDataService {
+    @Override
+    public int[] retrieveAllData() {
+        return new int[] {5};
+    }
+}
 
 public class SomeBusinessStubTest {
-    class SomeDataServiceStub implements SomeDataService {
-        @Override
-        public int[] retrieveAllData() {
-            return new int[] {1,2,3};
-        }
-    }
 
-    class SomeDataServiceEmptyStub implements SomeDataService {
-        @Override
-        public int[] retrieveAllData() {
-            return new int[] {};
-        }
-    }
-
-    class SomeDataServiceOneElementStub implements SomeDataService {
-        @Override
-        public int[] retrieveAllData() {
-            return new int[] {5};
-        }
-    }
     @Test
     public void calculateSumUsingDataService_basic() {
         SomeBusinessImpl business = new SomeBusinessImpl();
